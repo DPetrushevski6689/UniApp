@@ -1,0 +1,65 @@
+﻿@model UniApp.ViewModelsFunctionalities.AddPointsModel
+
+@{
+    ViewData["Title"] = "AddPoints";
+}
+
+<h2>AddPoints</h2>
+
+<h4>@Model.Enrollment.Student.FirstName</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Teachers" asp-action="AddPoints">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Enrollment.Id" />
+            <div class="form-group">
+                <label asp-for="Enrollment.Grade" class="control-label"></label>
+                <input asp-for="Enrollment.Grade" class="form-control" />
+                <span asp-validation-for="Enrollment.Grade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               Seminar Url: <p>@Model.Enrollment.SeminarUrl</p>
+            </div>
+            <div class="form-group">
+                Project Url: <h4>@Model.Enrollment.ProjectUrl</h4>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enrollment.ExamPoints" class="control-label"></label>
+                <input asp-for="Enrollment.ExamPoints" class="form-control" />
+                <span asp-validation-for="Enrollment.ExamPoints" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enrollment.SeminarPoints" class="control-label"></label>
+                <input asp-for="Enrollment.SeminarPoints" class="form-control" />
+                <span asp-validation-for="Enrollment.SeminarPoints" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enrollment.ProjectPoints" class="control-label"></label>
+                <input asp-for="Enrollment.ProjectPoints" class="form-control" />
+                <span asp-validation-for="Enrollment.ProjectPoints" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enrollment.AdditionalPoints" class="control-label"></label>
+                <input asp-for="Enrollment.AdditionalPoints" class="form-control" />
+                <span asp-validation-for="Enrollment.AdditionalPoints" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enrollment.FinishDate" class="control-label"></label>
+                <input asp-for="Enrollment.FinishDate" class="form-control" />
+                <span asp-validation-for="Enrollment.FinishDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

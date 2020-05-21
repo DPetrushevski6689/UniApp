@@ -1,0 +1,90 @@
+﻿@model UniApp.Models.Enrollment
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Enrollment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Student)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Student.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Course)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Course.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Semester)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Semester)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Grade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Grade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SeminarUrl)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SeminarUrl)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectUrl)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectUrl)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamPoints)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ExamPoints)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SeminarPoints)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SeminarPoints)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectPoints)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProjectPoints)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AdditionalPoints)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdditionalPoints)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FinishDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FinishDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

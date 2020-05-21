@@ -1,0 +1,64 @@
+﻿@model UniApp.ViewModelsFunctionalities.AddProjectsModel
+
+@{
+    ViewData["Title"] = "AddProjects";
+}
+
+<h2>Add Projects</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddProjects">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Enrollment.Id" />
+            <div class="form-group">
+                Semester: <h4>@Model.Enrollment.Semester</h4>
+            </div>
+            <div class="form-group">
+                Year: <h4>@Model.Enrollment.Year</h4>
+            </div>
+            <div class="form-group">
+                Grade: <h4>@Model.Enrollment.Grade</h4>
+            </div>
+            <div class="form-group">
+                <label asp-for="SeminarUrl" class="control-label"></label>
+                <input type="url" asp-for="SeminarUrl" class="form-control" />
+                <span asp-validation-for="SeminarUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjectUrl" class="control-label"></label>
+                <input type="url" asp-for="ProjectUrl" class="form-control" />
+                <span asp-validation-for="ProjectUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Exam Points: <h4>@Model.Enrollment.ExamPoints</h4>
+            </div>
+            <div class="form-group">
+                Seminar Points: <h4>@Model.Enrollment.SeminarPoints</h4>
+            </div>
+            <div class="form-group">
+                Project Points: <h4>@Model.Enrollment.ProjectPoints</h4>
+            </div>
+            <div class="form-group">
+                Additional Points: <h4>@Model.Enrollment.AdditionalPoints</h4>
+            </div>
+            <div class="form-group">
+                Finish Date: <h4>@Model.Enrollment.FinishDate</h4>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+

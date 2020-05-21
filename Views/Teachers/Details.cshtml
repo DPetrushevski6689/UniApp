@@ -1,0 +1,60 @@
+﻿@model UniApp.Models.Teacher
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Teacher</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Degree)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Degree)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AcademicRank)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AcademicRank)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficeNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OfficeNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HireDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HireDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfilePicture)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProfilePicture)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
